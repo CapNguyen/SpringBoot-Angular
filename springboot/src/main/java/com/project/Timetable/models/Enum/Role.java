@@ -12,8 +12,6 @@ import java.util.stream.Collectors;
 
 @RequiredArgsConstructor
 public enum Role {
-
-  USER(Collections.emptySet()),
   LECTURER(
           Set.of(
                   Permission.LECTURER_READ,

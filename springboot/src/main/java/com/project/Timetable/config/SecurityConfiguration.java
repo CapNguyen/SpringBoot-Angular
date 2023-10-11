@@ -34,16 +34,8 @@ public class SecurityConfiguration {
                 .disable()
                 .authorizeHttpRequests()
                 .requestMatchers(
-                        "/api/v1/auth/**")
+                        "/auth/**")
                 .permitAll()
-
-                .requestMatchers("/api/v1/management/**").hasAnyRole(LECTURER.name(), STUDENT.name())
-
-                .requestMatchers(GET, "/api/v1/management/**").hasAnyAuthority(Permission.LECTURER_READ.name(), Permission.STUDENT_READ.name())
-                .requestMatchers(POST, "/api/v1/management/**").hasAnyAuthority(Permission.LECTURER_CREATE.name(), Permission.STUDENT_CREATE.name())
-                .requestMatchers(PUT, "/api/v1/management/**").hasAnyAuthority(Permission.LECTURER_UPDATE.name(), Permission.STUDENT_UPDATE.name())
-                .requestMatchers(DELETE, "/api/v1/management/**").hasAnyAuthority(Permission.LECTURER_DELETE.name(), Permission.STUDENT_DELETE.name())
-
                 .anyRequest()
                 .authenticated()
                 .and()

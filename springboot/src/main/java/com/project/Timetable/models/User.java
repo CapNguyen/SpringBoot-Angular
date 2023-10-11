@@ -21,10 +21,6 @@ public class User implements UserDetails {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
-
-    @Column(nullable = false)
-    private String code;
-
     @Column(nullable = false)
     private String fullName;
 
@@ -35,16 +31,11 @@ public class User implements UserDetails {
     @Column(nullable = false)
     private String password;
 
-    @Column(nullable = false, unique = true)
-    private String phoneNumber;
-
-    private String image;
-
     @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
     private Role role;
 
     private boolean mfaEnabled;
+
     private String secret;
 
     @ManyToOne
