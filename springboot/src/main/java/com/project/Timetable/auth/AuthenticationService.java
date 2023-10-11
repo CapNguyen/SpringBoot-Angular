@@ -1,11 +1,10 @@
 package com.project.Timetable.auth;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.project.Timetable.config.JwtService;
 import com.project.Timetable.tfa.TwoFactorAuthenticationService;
-import com.project.Timetable.user.Role;
 import com.project.Timetable.user.User;
 import com.project.Timetable.user.UserRepository;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;

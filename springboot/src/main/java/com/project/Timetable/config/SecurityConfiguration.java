@@ -14,10 +14,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 import static com.project.Timetable.user.Role.LECTURER;
 import static com.project.Timetable.user.Role.STUDENT;
-import static org.springframework.http.HttpMethod.DELETE;
-import static org.springframework.http.HttpMethod.GET;
-import static org.springframework.http.HttpMethod.POST;
-import static org.springframework.http.HttpMethod.PUT;
+import static org.springframework.http.HttpMethod.*;
 
 @Configuration
 @EnableWebSecurity
