@@ -3,8 +3,8 @@ package com.project.Timetable.auth;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.project.Timetable.config.JwtService;
 import com.project.Timetable.tfa.TwoFactorAuthenticationService;
-import com.project.Timetable.user.User;
-import com.project.Timetable.user.UserRepository;
+import com.project.Timetable.models.User;
+import com.project.Timetable.models.UserRepository;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -29,8 +29,7 @@ public class AuthenticationService {
 
     public AuthenticationResponse register(RegisterRequest request) {
         var user = User.builder()
-                .firstname(request.getFirstname())
-                .lastname(request.getLastname())
+                .fullName(request.getFirstname())
                 .email(request.getEmail())
                 .password(passwordEncoder.encode(request.getPassword()))
                 .role(request.getRole())

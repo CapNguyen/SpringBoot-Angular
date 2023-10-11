@@ -1,4 +1,4 @@
-package com.project.Timetable.user;
+package com.project.Timetable.models;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

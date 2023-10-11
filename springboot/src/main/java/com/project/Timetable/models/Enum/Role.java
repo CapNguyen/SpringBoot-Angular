@@ -1,5 +1,6 @@
-package com.project.Timetable.user;
+package com.project.Timetable.models.Enum;
 
+import com.project.Timetable.models.Enum.Permission;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

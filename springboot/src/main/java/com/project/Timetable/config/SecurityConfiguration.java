@@ -1,6 +1,6 @@
 package com.project.Timetable.config;
 
-import com.project.Timetable.user.Permission;
+import com.project.Timetable.models.Enum.Permission;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -12,8 +12,8 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
-import static com.project.Timetable.user.Role.LECTURER;
-import static com.project.Timetable.user.Role.STUDENT;
+import static com.project.Timetable.models.Enum.Role.LECTURER;
+import static com.project.Timetable.models.Enum.Role.STUDENT;
 import static org.springframework.http.HttpMethod.*;
 
 @Configuration

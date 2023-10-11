@@ -1,4 +1,4 @@
-package com.project.Timetable.user;
+package com.project.Timetable.models.Enum;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

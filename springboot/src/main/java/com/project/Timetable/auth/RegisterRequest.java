@@ -1,6 +1,6 @@
 package com.project.Timetable.auth;
 
-import com.project.Timetable.user.Role;
+import com.project.Timetable.models.Enum.Role;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

@@ -1,6 +1,6 @@
 package com.project.Timetable.config;
 
-import com.project.Timetable.user.UserRepository;
+import com.project.Timetable.models.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
