@@ -1,0 +1,63 @@
+<h2>{{from}}</h2>
+<form action="date_box" method="GET">
+  <table style="border:none">
+    <tr>
+      <td class="date_picker">From:</td>
+      <td><input type="date" name="from" /></td>
+      <td rowspan="2"><input style="height: 45px;" type="submit" value="Enter" /></td>
+    </tr>
+    <tr>
+      <td class="date_picker">To:</td>
+      <td><input type="date" name="to" /></td>
+    </tr>
+  </table>
+</form>
+<div class="timetable">
+  <div class="week-names">
+    <div class="week-days" *ngFor="let d of dateList, let i=index">{{weekdays[i]}}<br/>{{d| date: 'shortDate' }}</div>
+  </div>
+  <div class="time-interval">
+    <div *ngFor="let t of timeslots">
+      Slot {{t.id + 1}}
+      <br />
+      {{t.name}}
+    </div>
+  </div>
+  <div class="content">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div class="weekend"></div>
+    <div class="weekend"></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div class="weekend"></div>
+    <div class="weekend"></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div class="weekend"></div>
+    <div class="weekend"></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div class="weekend"></div>
+    <div class="weekend"></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div class="weekend"></div>
+    <div class="weekend"></div>
+  </div>
+</div>

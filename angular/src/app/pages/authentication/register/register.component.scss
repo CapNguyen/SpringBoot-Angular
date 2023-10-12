@@ -16,6 +16,11 @@ form {
 .form-group {
   margin-bottom: 15px;
 }
+.form-choose {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
 
 label {
   display: block;
