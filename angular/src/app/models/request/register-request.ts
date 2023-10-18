@@ -3,5 +3,6 @@ export interface RegisterRequest {
   email?: string;
   password?: string;
   role?: string;
+  campus_id?: number;
   mfaEnabled?: string;
 }

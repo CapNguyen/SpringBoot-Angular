@@ -14,4 +14,5 @@ export class Session {
   room?: Room;
   timeslot?: TimeSlot;
   user?: User;
+  attendances?: Attendance[];
 }

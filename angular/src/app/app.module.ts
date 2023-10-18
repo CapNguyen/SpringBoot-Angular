@@ -8,13 +8,21 @@ import { RegisterComponent } from './pages/authentication/register/register.comp
 import { WelcomeComponent } from './pages/welcome/welcome.component';
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
+import { TimeTableComponent } from './pages/student/time-table/time-table.component';
+import { CheckAttendanceComponent } from './pages/student/check-attendance/check-attendance.component';
+import { TakeAttendanceComponent } from './pages/lecturer/take-attendance/take-attendance.component';
+import { ScheduleComponent } from './pages/lecturer/Schedule/schedule.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    TimeTableComponent,
+    CheckAttendanceComponent,
+    TakeAttendanceComponent,
+    ScheduleComponent,
   ],
   imports: [
     BrowserModule,

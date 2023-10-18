@@ -5,6 +5,5 @@ export class Attendance {
   id!: number;
   note?: String;
   status!: string;
-  user?: User;
-  session?: Session;
+  session!: Session;
 }

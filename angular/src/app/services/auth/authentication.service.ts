@@ -1,37 +1,36 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {RegisterRequest} from "../../models/register-request";
-import {AuthenticationResponse} from "../../models/authentication-response";
-import {VerificationRequest} from "../../models/verification-request";
-import {AuthenticationRequest} from "../../models/authentication-request";
+import { HttpClient } from '@angular/common/http';
+import { RegisterRequest } from '../../models/request/register-request';
+import { AuthenticationResponse } from '../../models/response/authentication-response';
+import { VerificationRequest } from '../../models/request/verification-request';
+import { AuthenticationRequest } from '../../models/request/authentication-request';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthenticationService {
+  private baseUrl = 'http://localhost:8080/auth';
 
-  private baseUrl = 'http://localhost:8080/auth'
+  constructor(private http: HttpClient) {}
 
-  constructor(
-    private http: HttpClient
-  ) { }
-
-  register(
-    registerRequest: RegisterRequest
-  ) {
-    return this.http.post<AuthenticationResponse>
-    (`${this.baseUrl}/register`, registerRequest);
+  register(registerRequest: RegisterRequest) {
+    return this.http.post<AuthenticationResponse>(
+      `${this.baseUrl}/register`,
+      registerRequest
+    );
   }
 
-  login(
-    authRequest: AuthenticationRequest
-  ) {
-    return this.http.post<AuthenticationResponse>
-    (`${this.baseUrl}/authenticate`, authRequest);
+  authenticate(authRequest: AuthenticationRequest) {
+    return this.http.post<AuthenticationResponse>(
+      `${this.baseUrl}/authenticate`,
+      authRequest
+    );
   }
 
   verifyCode(verificationRequest: VerificationRequest) {
-    return this.http.post<AuthenticationResponse>
-    (`${this.baseUrl}/verify`, verificationRequest);
+    return this.http.post<AuthenticationResponse>(
+      `${this.baseUrl}/verify`,
+      verificationRequest
+    );
   }
 }

@@ -21,8 +21,14 @@
     </div>
     <div class="form-choose">
       <label for="role">Role: </label>
-      <input  name="role"  type="radio" value="LECTURER" [(ngModel)]="registerRequest.role">Lecturer
-      <input  name="role"  type="radio" value="STUDENT" [(ngModel)]="registerRequest.role">Student
+      <input name="role" type="radio" value="LECTURER" [(ngModel)]="registerRequest.role">Lecturer
+      <input name="role" type="radio" value="STUDENT" [(ngModel)]="registerRequest.role">Student
+    </div>
+    <div class="form-choose">
+      <label for="campus">Campus: </label>
+      <select name="campus_id" [(ngModel)]="registerRequest.campus_id">
+        <option *ngFor="let c of campusses" [ngValue] ="c.id"> {{c.name}}</option>
+      </select>
     </div>
     <div class="form-choose">
       <input id="rememberMe" name="rememberMe" type="checkbox" [(ngModel)]="registerRequest.mfaEnabled">

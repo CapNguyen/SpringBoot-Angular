@@ -1,63 +1,57 @@
-<h2>{{from}}</h2>
-<form action="date_box" method="GET">
-  <table style="border:none">
-    <tr>
-      <td class="date_picker">From:</td>
-      <td><input type="date" name="from" /></td>
-      <td rowspan="2"><input style="height: 45px;" type="submit" value="Enter" /></td>
+<!-- <h2>{{to|date:"dd/MM/yyyy"}}</h2>
+<ng-container *ngFor="let ses of sessions">
+  {{ses.date.toLocaleDateString()}}
+</ng-container>
+
+
+<div class="content">
+  <table style="border: 2px solid black;width: 100%;" *ngIf="dateList !=null">
+    <tr style="background-color: #6b90da">
+      <td>
+        <form action="date_box" method="GET">
+
+          <table style="border:none">
+            <tr>
+              <td class="date_picker">From:</td>
+              <td><input type="date" name="from" /></td>
+              <td rowspan="2"><input style="height: 45px;" type="submit" value="Enter" /></td>
+            </tr>
+            <tr>
+              <td class="date_picker">To:</td>
+              <td><input type="date" name="to" disabled /></td>
+            </tr>
+          </table>
+        </form>
+      </td>
+
+      <td *ngFor="let d of dateList,let i =index">
+        {{weekdays[i]}}
+        <br />
+        {{d |date:'dd/MM//yyyy' }}
+      </td>
     </tr>
-    <tr>
-      <td class="date_picker">To:</td>
-      <td><input type="date" name="to" /></td>
+    <tr *ngFor="let slot of timeslots">
+      <td>Slot {{slot.id+1}}</td>
+      <ng-container *ngFor="let d of dateList">
+        <td class="infocell">
+          <ng-container *ngFor="let ses of sessions">
+            <ng-container *ngFor="let ses">
+              <ng-container
+                *ngIf="ses.timeslot?.id==slot.id && ses.date.getDate()==d.getDate() && ses.group?.id==group.id">
+                <a href="#">{{ses.course?.code}}</a>
+                <br />
+              at {{ses.room?.name}}
+              <br />
+              <b>{{ses.status}}</b>
+                <br />
+                <button> {{ses.timeslot?.name}} + {{ses.date | date:"dd/MM/yyyy"}}</button>
+              </ng-container>
+            </ng-container>
+          </ng-container>
+        </td>
+      </ng-container>
     </tr>
   </table>
-</form>
-<div class="timetable">
-  <div class="week-names">
-    <div class="week-days" *ngFor="let d of dateList, let i=index">{{weekdays[i]}}<br/>{{d| date: 'shortDate' }}</div>
-  </div>
-  <div class="time-interval">
-    <div *ngFor="let t of timeslots">
-      Slot {{t.id + 1}}
-      <br />
-      {{t.name}}
-    </div>
-  </div>
-  <div class="content">
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div class="weekend"></div>
-    <div class="weekend"></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div class="weekend"></div>
-    <div class="weekend"></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div class="weekend"></div>
-    <div class="weekend"></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div class="weekend"></div>
-    <div class="weekend"></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div class="weekend"></div>
-    <div class="weekend"></div>
-  </div>
-</div>
+</div> -->
+  <p>Id:{{user_id}}</p>
+  <p>Name:{{fullname}}</p>
